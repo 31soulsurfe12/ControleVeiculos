@@ -23,9 +23,24 @@
             </div>
           </div>
         </div>
-
+        <div class="col-sm-6 col-md-3">
+          <div class="ls-box">
+            <div class="ls-box-head">
+              <h6 class="ls-title-4">Solicitações Efetuadas</h6>
+            </div>
+            <div class="ls-box-body">
+              <strong>{{ App\Solicitacao::count() }}</strong>
+              <small>Solicitações</small>
+            </div>
+            <div class="ls-box-footer">
+              <a href="{{ route('solicitacoes') }}" aria-label="Buscar Solicitação" class="ls-btn ls-btn-sm" title="Buscar Solicitação">Buscar Solicitação</a>
+            </div>
+          </div>
         </div>
+
+
       </div>
+    </div>
     </div>
 
     @endsection

@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="description" content="Insira aqui a descrição da página.">
     <link href="http://assets.locaweb.com.br/locastyle/3.10.0/stylesheets/locastyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="icon" sizes="192x192" href="/locawebstyle/assets/images/ico-boilerplate.png">
     <link rel="apple-touch-icon" href="/locawebstyle/assets/images/ico-boilerplate.png">
   </head>
   <body>
     <div class="ls-topbar ">
 
+   <script src="js/app.js" charset="utf-8"></script>
   <!-- Barra de Notificações -->
   <div class="ls-notification-topbar">
     <!-- Dropdown com detalhes da conta de usuário -->
@@ -59,6 +61,13 @@
               <ul>
                 <li><a href="/vehicle/add">Cadastrar</a></li>
                 <li><a href="{{ route('vehicles') }}">Buscar</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="ls-ico-panel-backup" title="Solicitacao">Solicitação de veiculos</a>
+              <ul>
+                  <li><a href="/solicitacao/add">Cadastrar</a></li>
+                <li><a href="{{ route('solicitacoes') }}">Buscar</a></li>
               </ul>
             </li>
 

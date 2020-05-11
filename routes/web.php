@@ -40,3 +40,18 @@ Route::post('/vehicle/edit/{id}', 'VehicleController@post_edit_vehicle')->name('
 
 // ROTAS PARA DELETAR VEICULO
 Route::get('/vehicle/delete/{id}', 'VehicleController@delete_vehicle')->name('vehicle.delete');
+
+//================================== ROTAS PARA Solicitação ==================================//
+// ROTAS PARA ADICIONAR Solicitação
+Route::get('/solicitacao/add', 'SolicitacaoController@get_add_solicitacao')->name('solicitacao.add'); // Rota da view
+Route::post('/solicitacao/add', 'SolicitacaoController@post_add_solicitacao')->name('solicitacao.postAdd'); // Rota do formulário
+
+// ROTAS PARA LISTAR Solicitação
+Route::get('/solicitacao', function() { return redirect()->route('solicitacoes'); });
+Route::post('/solicitacao', 'SolicitacaoController@post_list_solicitacao')->name('solicitacao.list');
+Route::get('/solicitacoes', 'SolicitacaoController@list_solicitacoes')->name('solicitacoes');
+
+//ROTAS PARA EDITAR Solicitação
+Route::get('/solicitacao/edit/{id}', 'SolicitacaoController@get_edit_solicitacao')->name('solicitacao.edit');
+Route::post('/solicitacao/edit/{id}', 'SolicitacaoController@post_edit_solicitacao')->name('solicitacao.postEdit');
+Route::get('/solicitacao/delete/{id}', 'SolicitacaoController@delete_solicitacao')->name('solicitacao.delete');

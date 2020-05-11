@@ -24,11 +24,10 @@
       </label>
       <label class="ls-label col-md-2">
         <b class="ls-label-text">Ano:</b>
-        <input class="ls-no-spin" type="number" min="1900" max="3000" name="year" placeholder="Ano" required >
+        <input class="ls-no-spin" type="number"  name="year" placeholder="Ano" required >
       </label>
       <label class="ls-label col-md-2">
         <b class="ls-label-text">Situação do veiculo</b>
-      
       <input class="ls-no-spin" type="text"  name="situacao" placeholder="Situação do veiculo" required   >
       </label>
     </fieldset>

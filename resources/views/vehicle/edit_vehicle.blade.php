@@ -8,23 +8,23 @@
     <fieldset>
       <label class="ls-label col-md-3">
         <b class="ls-label-text">Marca</b>
-        <input value="{{ $vehicle->name }}" type="text" data-ls-module="charCounter" maxlength="100" name="brand" placeholder="Marca do Veiculo" required >
+        <input value="{{ $vehicle->brand }}"  type="text" name="brand" placeholder="Marca do Veiculo" required >
       </label>
        <label class="ls-label col-md-2">
         <b class="ls-label-text">Modelo</b>
-        <input value="{{ $vehicle->model }}" class="ls-no-spin" type="number" name="model" placeholder="Modelo" required>
+        <input value="{{ $vehicle->model }}" type="text" name="model" placeholder="Modelo" required>
       </label>
       <label class="ls-label col-md-2">
-        <b class="ls-label-text">Placa:</b>
-        <input class="ls-no-spin" type="text" name="placa" placeholder="Placa" required >
+        <b class="ls-label-text">Placa</b>
+        <input value="{{ $vehicle->placa }}"  type="text" name="placa" placeholder="Placa" required >
       </label>
-       <label class="ls-label col-md-2">
-        <b class="ls-label-text">Ano</b>
-        <input value="{{ $vehicle->year }}" class="ls-no-spin" type="integer" name="year" placeholder="Ano" required>
+      <label class="ls-label col-md-2">
+        <b class="ls-label-text">Ano:</b>
+        <input value="{{ $vehicle->year }}" class="ls-no-spin" type="number"  name="year" placeholder="Ano" required >
       </label>
       <label class="ls-label col-md-2">
         <b class="ls-label-text">Situação do veiculo</b>
-        <input class="ls-no-spin" type="text"  name="situacao" placeholder="Situação do veiculo" required >
+        <input value="{{ $vehicle->situacao }}"  type="text"  name="situacao" placeholder="Situação do veiculo" required >
       </label>
     </fieldset>
     <div class="ls-actions-btn">

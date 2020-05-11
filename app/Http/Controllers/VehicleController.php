@@ -28,7 +28,7 @@ class VehicleController extends Controller
   public function post_add_vehicle(Request $info)
   {
     $vehicle = $this->vehicle->addVehicle($info);
-    return redirect()->route('vehicles');
+    return redirect()->route('vehicles')->with('message', 'Veiculo adicionado com sucesso!');;
   }
 	//---------------- Listar veiculo Específico -----------------//
 
@@ -63,14 +63,16 @@ class VehicleController extends Controller
 public function post_edit_vehicle(Request $info, $id)
 {
 	$vehicle = $this->vehicle->find($id);
-	$vehicle->brand  = $info['brand '];
+	$vehicle->brand  = $info['brand'];
 	$vehicle->model = $info['model'];
 	$vehicle->placa = $info['placa'];
-	$vehicle->year  = $info['year '];
+	$vehicle->year  = $info['year'];
 	$vehicle->situacao = $info['situacao'];
 	$vehicle->save();
-	return redirect()->route('vehicles');
+	return redirect()->route('vehicles')->with('message', 'Veiculo alterado com sucesso!');;
 }
+
+//-------------------- Deletar Veiculos --------------------//
 
 public function delete_vehicle($id) {
 			$vehicle = $this->vehicle->find($id);
