@@ -35,7 +35,7 @@
             <div class="ls-box-footer">
               <a href="{{ route('solicitacoes') }}" aria-label="Buscar Solicitação" class="ls-btn ls-btn-sm" title="Buscar Solicitação">Buscar Solicitação</a>
             </div>
-          </div>
+          </div> 
         </div>
 
 

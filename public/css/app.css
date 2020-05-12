@@ -44,6 +44,31 @@
   box-sizing: border-box;
 }
 
+.logo {
+  width: 160px;
+}
+.hospital{
+
+  font-size: 12pt;
+}
+.margen {
+
+margin-top: 10px;
+}
+.logo1 {
+  width: 200px;
+  margin-top: 15px;
+}
+.hospital1{
+  text-align: center;
+  font-size: 15pt;
+}
+.margen1 {
+text-align:right;
+margin-top: 15px;
+}
+
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -10881,4 +10906,3 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-

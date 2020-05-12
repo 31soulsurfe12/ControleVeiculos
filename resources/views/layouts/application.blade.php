@@ -26,9 +26,8 @@
 
       <nav class="ls-dropdown-nav ls-user-menu">
         <ul>
-
           <li><a href="{{ route('logout') }}">Sair</a></li>
-         </ul>
+        </ul>
       </nav>
     </div>
   </div>
@@ -38,19 +37,29 @@
   <a href="{{ route('home') }}"  class="ls-go-next"><span class="ls-text">Voltar à lista de controle</span></a>
 
   <!-- Nome do produto/marca com sidebar -->
-    <h1 class="ls-brand-name">
-      <a href="home" >
-        <small>CONTROLE DE VEICULOS</small>
-        HOSPITAL SÃO JOSÉ
-      </a>
-    </h1>
 
+  <h1 class="ls-brand-name">
+      <div class="form-row">
+       <div class="form-group col-md-6">
+         <img src="{{asset('images/logo.png')}}" class="logo"/>
+       </div>
+        <div class="form-group col-md-6 ">
+
+          <a href="home" >
+           <small class="margen">CONTROLE DE VEICULOS</small>
+           <h5 class="hospital">HOSPITAL SÃO JOSÉ</h5>
+          </a>
+        </div>
+     </div>
+   </h1>
 </div>
+
 
     <aside class="ls-sidebar">
 
   <div class="ls-sidebar-inner">
-      <a href="/locawebstyle/documentacao/exemplos//pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de controle</span></a>
+      <a href="/locawebstyle/documentacao/exemplos//pre-painel"  class="ls-go-prev">
+        <span class="ls-text">Voltar à lista de controle</span></a>
 
       <nav class="ls-menu">
         <ul>

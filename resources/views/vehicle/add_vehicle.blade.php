@@ -1,9 +1,8 @@
 @extends('layouts.application')
 
 @section('content')
-<h1 class="ls-title-intro ls-ico-user-add">Adicionar Veiculo</h1>
+<h1 class="ls-title-intro ls-ico-list">Adicionar Veiculo</h1>
 <div class="ls-box">
-
   <hr>
   <h5 class="ls-title-5">Cadastrar Veículo:</h5>
   <form method="POST" action="{{ route('vehicle.postAdd') }}" class="ls-form row">
@@ -36,6 +35,8 @@
       <input class="ls-btn-danger" type="reset" value="Limpar">
     </div>
   </form>
+
 </div>
+
 
 @stop

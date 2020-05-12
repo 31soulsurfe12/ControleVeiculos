@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" >
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,14 +23,20 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Hospital São José') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <h1 class="ls-brand-name">
+                    <div class="form-row">
+                      <div class="form-group col-md-4">
+                       <img src="{{asset('images/logo.png')}}" class="logo1"/>
+                      </div>
+                      <div class="form-group col-md-8 ">
+                         <h2 class="margen1">CONTROLE DE VEICULOS</h2>
+                          <h2 class="hospital1">HOSPITAL SÃO JOSÉ</h2>
+                     </div>
+
+                      </div>
+                   </div>
+                  </h1>
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 

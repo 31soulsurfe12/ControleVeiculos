@@ -1,8 +1,10 @@
 @extends('layouts.application')
 
 @section('content')
+
 <h1 class="ls-title-intro ls-ico-list">Editar Veiculo</h1>
 <div class="ls-box">
+
   <form method="Post" action="{{route('vehicle.edit',$vehicle->id)}}" class="ls-form row">
     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
     <fieldset>
