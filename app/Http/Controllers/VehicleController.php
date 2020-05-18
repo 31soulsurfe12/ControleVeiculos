@@ -36,14 +36,9 @@ class VehicleController extends Controller
   {
     return list_vehicles();
   }
-	public function post_list_vehicle(Request $field)
+	public function post_list_vehicle()
 	{
-		if(is_null($field['model'])) {
-			$vehicles = $this->vehicles->getVehicles();
-		} else {
-			$vehicles = $this->vehicle->getVehicle($field);
-		}
-		return view('vehicle/list_vehicle', compact('vehicles'));
+
 	}
 	//--------------------- Listar clientes ----------------------//
    public function list_vehicles()

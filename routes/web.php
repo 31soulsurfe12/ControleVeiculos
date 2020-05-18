@@ -55,3 +55,20 @@ Route::get('/solicitacoes', 'SolicitacaoController@list_solicitacoes')->name('so
 Route::get('/solicitacao/edit/{id}', 'SolicitacaoController@get_edit_solicitacao')->name('solicitacao.edit');
 Route::post('/solicitacao/edit/{id}', 'SolicitacaoController@post_edit_solicitacao')->name('solicitacao.postEdit');
 Route::get('/solicitacao/delete/{id}', 'SolicitacaoController@delete_solicitacao')->name('solicitacao.delete');
+
+//================================== ROTAS PARA Autorização ==================================//
+// ROTAS PARA ADICIONAR Autorização
+Route::get('/authorizacao/add', 'AuthorizacaoController@get_add_authorizacao')->name('authorizacao.add'); // Rota da view
+Route::post('/authorizacao/add', 'AuthorizacaoController@post_add_authorizacao')->name('authorizacao.postAdd'); // Rota do formulário
+
+// ROTAS PARA LISTAR Autorização
+Route::get('/authorizacao', function() { return redirect()->route('authorizacoes'); });
+Route::post('/authorizacao', 'AuthorizacaoController@post_list_authorizacao')->name('authorizacao.list');
+Route::get('/authorizacoes', 'AuthorizacaoController@list_authorizacoes')->name('authorizacoes');
+
+//ROTAS PARA EDITAR Autorização
+Route::get('/authorizacao/edit/{id}', 'AuthorizacaoController@get_edit_authorizacao')->name('authorizacao.edit');
+Route::post('/authorizacao/edit/{id}', 'AuthorizacaoController@post_edit_authorizacao')->name('authorizacao.postEdit');
+
+// ROTAS PARA DELETAR Autorização
+Route::get('/authorizacao/delete/{id}', 'AuthorizacaoController@delete_authorizacao')->name('authorizacao.delete');

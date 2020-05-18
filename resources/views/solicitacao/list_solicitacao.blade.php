@@ -14,7 +14,7 @@
   <table class="ls-table ls-table-striped ls-bg-header ">
     <thead>
       <tr>
-        <th>Unidade Solicitante</th>
+        <th>Setor Solicitante</th>
         <th>Ramal</th>
         <th>Roteiro</th>
         <th>Finalidade</th>
@@ -22,9 +22,8 @@
         <th>Hora Saida</th>
         <th>Data Retorno</th>
         <th>Hora Retorno</th>
-        <th>Autenticação do Gerente</th>
-        <th>Data</th>
-        <th>Nome dos Usuários</th>
+        <th>Status da Solicitação</th>
+        <th>Nome dos Pacientes</th>
         <th>Ação</th>
       </tr>
     </thead>
@@ -40,7 +39,6 @@
         <td>{{ $solicitacao->dataretorno}}</td>
         <td>{{ $solicitacao->horaretorno }}</td>
         <td>{{ $solicitacao->autenticacao }}</td>
-        <td>{{ $solicitacao->data }}</td>
         <td>{{ $solicitacao->nameusuario }}</td>
         <td class="ls-regroup ">
           <div data-ls-module="dropdown" class="ls-dropdown ">

@@ -32,31 +32,24 @@
     </div>
   </div>
 
-  <span class="ls-show-sidebar ls-ico-menu"></span>
-
-  <a href="{{ route('home') }}"  class="ls-go-next"><span class="ls-text">Voltar à lista de controle</span></a>
-
   <!-- Nome do produto/marca com sidebar -->
 
   <h1 class="ls-brand-name">
-      <div class="form-row">
+      <div class="container-fluid">
        <div class="form-group col-md-6">
-         <img src="{{asset('images/logo.png')}}" class="logo"/>
+          <img src="{{URL::asset('images/logo.png')}}" alt="profile Pic"  width="175"  class="logo">
        </div>
         <div class="form-group col-md-6 ">
-
-          <a href="home" >
-           <small class="margen">CONTROLE DE VEICULOS</small>
-           <h5 class="hospital">HOSPITAL SÃO JOSÉ</h5>
+          <a >
+           <small class="margen" >CONTROLE DE VEICULOS</small>
+           <h6 class="hospital">HOSPITAL SÃO JOSÉ</h6>
           </a>
         </div>
      </div>
    </h1>
 </div>
 
-
     <aside class="ls-sidebar">
-
   <div class="ls-sidebar-inner">
       <a href="/locawebstyle/documentacao/exemplos//pre-painel"  class="ls-go-prev">
         <span class="ls-text">Voltar à lista de controle</span></a>
@@ -77,6 +70,13 @@
               <ul>
                   <li><a href="/solicitacao/add">Cadastrar</a></li>
                 <li><a href="{{ route('solicitacoes') }}">Buscar</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="ls-ico-panel-backup" title="Solicitacao">Autorização da Solicitação</a>
+              <ul>
+                  <li><a href="/authorizacao/add">Cadastrar</a></li>
+                <li><a href="{{ route('authorizacoes') }}">Buscar</a></li>
               </ul>
             </li>
 

@@ -11,8 +11,8 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label class="ls-label col-md-10">
-        <b class="ls-label-text">Unidade Solicitante</b>
-        <input type="text"  class="form-control" name="namesolicitante" placeholder="Unidade Solicitante" required >
+        <b class="ls-label-text">Setor Solicitante</b>
+        <input type="text"  class="form-control" name="namesolicitante" placeholder="Setor Solicitante" required >
       </label>
     </div>
     <div class="form-group col-md-6">
@@ -62,36 +62,29 @@
 <div class="form-group col-md-6">
     <label class="ls-label col-md-5">
       <b class="ls-label-text">Data</b>
-      <input type="date"  class="form-control" name="dataretorno" placeholder="Data" required >
+      <input type="date"  class="form-control" name="dataretorno" placeholder="Data"  >
     </label>
   </div>
   <div class="form-group col-md-6">
     <label class="ls-label col-md-5">
       <b class="ls-label-text">Hora</b>
-      <input type="time"  class="form-control" name="horaretorno" placeholder="Hora" required >
-    </label>
-  </div>
-</div>
-<div class="form-row">
-<div class="form-group col-md-6">
-    <label class="ls-label col-md-12">
-      <b class="ls-label-text">Autenticação do Gerente</b>
-      <input type="text"  class="form-control" name="autenticacao" placeholder="Autenticação do Gerente" required >
-    </label>
-  </div>
-  <div class="form-group col-md-6">
-    <label class="ls-label col-md-5">
-      <b class="ls-label-text">Data</b>
-      <input type="date"  class="form-control" name="data" placeholder="Data" required >
+      <input type="time"  class="form-control" name="horaretorno" placeholder="Hora"  >
     </label>
   </div>
 </div>
 <div class="form-group col-md-6">
     <label class="ls-label col-md-12">
-      <b class="ls-label-text">Nome dos Usuários</b>
-      <input type="text"  class="form-control" name="nameusuario" placeholder="Nome dos Usuários" required >
+      <b class="ls-label-text">Nome dos Pacientes</b>
+      <input type="text"  class="form-control" name="nameusuario" placeholder="Nome dos Pacientes" required >
     </label>
 </div>
+<div class="form-group col-md-6">
+    <label class="ls-label col-md-6">
+      <b class="ls-label-text">Status da Solicitação</b>
+      <input type="text"  class="form-control" name="autenticacao" placeholder="" required >
+    </label>
+  </div>
+
 
 </fieldset>
 <div class="ls-actions-btn">

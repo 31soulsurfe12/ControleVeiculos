@@ -35,10 +35,23 @@
             <div class="ls-box-footer">
               <a href="{{ route('solicitacoes') }}" aria-label="Buscar Solicitação" class="ls-btn ls-btn-sm" title="Buscar Solicitação">Buscar Solicitação</a>
             </div>
-          </div> 
+          </div>
         </div>
 
-
+        <div class="col-sm-6 col-md-3">
+          <div class="ls-box">
+            <div class="ls-box-head">
+              <h6 class="ls-title-4">Autorizações Efetuadas</h6>
+            </div>
+            <div class="ls-box-body">
+              <strong>{{ App\Authorizacao::count() }}</strong>
+              <small>Autorizações</small>
+            </div>
+            <div class="ls-box-footer">
+              <a href="{{ route('authorizacoes') }}" aria-label="Buscar Autorização" class="ls-btn ls-btn-sm" title="Buscar Autorização">Buscar Autorização</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     </div>

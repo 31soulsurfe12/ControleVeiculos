@@ -34,7 +34,6 @@ class Solicitacao extends Model{
     $solicitacao->horasaida = $field['horasaida'];
     $solicitacao->dataretorno = $field['dataretorno'];
     $solicitacao->horaretorno = $field['horaretorno'];
-    $solicitacao->data = $field['data'];
     $solicitacao->autenticacao = $field['autenticacao'];
     $solicitacao->nameusuario = $field['nameusuario'];
 

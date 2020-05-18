@@ -9,8 +9,8 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label class="ls-label col-md-10">
-            <b class="ls-label-text">Unidade Solicitante</b>
-            <input value="{{ $solicitacao->namesolicitante }}" type="text"  class="form-control" name="namesolicitante" placeholder="Unidade Solicitante" required >
+            <b class="ls-label-text">Setor Solicitante</b>
+            <input value="{{ $solicitacao->namesolicitante }}" type="text"  class="form-control" name="namesolicitante" placeholder="Setor Solicitante" required >
           </label>
         </div>
         <div class="form-group col-md-6">
@@ -70,26 +70,19 @@
         </label>
       </div>
     </div>
-    <div class="form-row">
-    <div class="form-group col-md-6">
-        <label class="ls-label col-md-12">
-          <b class="ls-label-text">Autenticação do Gerente</b>
-          <input value="{{ $solicitacao->autenticacao }}"  type="text"  class="form-control" name="autenticacao" placeholder="Autenticação do Gerente" required >
-        </label>
-      </div>
-      <div class="form-group col-md-6">
-        <label class="ls-label col-md-5">
-          <b class="ls-label-text">Data</b>
-          <input value="{{ $solicitacao->data }}" type="date"  class="form-control" name="data" placeholder="Data" required >
-        </label>
-      </div>
-    </div>
     <div class="form-group col-md-6">
         <label class="ls-label col-md-12">
           <b class="ls-label-text">Nome dos Usuários</b>
           <input value="{{ $solicitacao->nameusuario }}" type="text"  class="form-control" name="nameusuario" placeholder="Nome dos Usuários" required >
         </label>
     </div>
+    <div class="form-group col-md-6">
+        <label class="ls-label col-md-6">
+          <b class="ls-label-text">Status da Solicitação</b>
+          <input value="{{ $solicitacao->autenticacao }}"  type="text"  class="form-control" name="autenticacao"  required >
+        </label>
+    </div>
+
     </fieldset>
     <div class="ls-actions-btn">
       <input type="submit" value="Atualizar" class="ls-btn" title="update">

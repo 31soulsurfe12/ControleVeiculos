@@ -23,7 +23,6 @@ class CreateSolicitacoesTable extends Migration
           $table->time('horasaida')->nullable(false);
           $table->date('dataretorno')->nullable(false);
           $table->time('horaretorno')->nullable(false);
-          $table->date('data')->nullable(false);
           $table->string('autenticacao', 30)->nullable(false);
           $table->string('nameusuario', 50)->nullable(false);
 

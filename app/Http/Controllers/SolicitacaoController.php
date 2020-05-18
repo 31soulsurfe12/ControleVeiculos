@@ -44,7 +44,7 @@ class SolicitacaoController extends Controller
     }
     return view('solicitacao/list_solicitacao', compact('solicitacoes'));
   }
-  //------------------------------------------------------------//
+  //-----------------------------------------------------------//
 
   //--------------------- Listar Solicitacao----------------------//
   public function list_solicitacoes()
@@ -60,6 +60,9 @@ class SolicitacaoController extends Controller
     public function get_edit_solicitacao($id)
   {
     $solicitacao = $this->solicitacao->find($id);
+
+
+
     return view('solicitacao/edit_solicitacao', compact('solicitacao'));
   }
 
@@ -74,7 +77,6 @@ class SolicitacaoController extends Controller
     $solicitacao->horasaida = $info['horasaida'];
     $solicitacao->dataretorno = $info['dataretorno'];
     $solicitacao->horaretorno =$info['horaretorno'];
-    $solicitacao->data = $info['data'];
     $solicitacao->autenticacao = $info['autenticacao'];
     $solicitacao->nameusuario = $info['nameusuario'];
     $solicitacao->save();
