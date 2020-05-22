@@ -8,12 +8,18 @@ use \App\authorizacao;
 class Authorizacao extends Model
 {
   protected $table = "authorizacaos";
+  protected $fillable = ['placa'];
 
 
-  public function getAuthorizacao()
+  public function getAuthorizacao($field)
   {
-
+    if(!is_null($field['placa'])) {
+      $authorizacao = Authorizacao::where('placa', 'LIKE', '%'.$field['placa'].'%')
+                        ->get();
+    }
+    return $authorizacao;
   }
+
 
   public function getAuthorizacoes()
   {

@@ -6,13 +6,13 @@ use \App\solicitacao;
 
 class Solicitacao extends Model{
   protected $table = "solicitacoes";
-  protected $fillable = ['namesolicitante', 'namefinalidade'];
+  protected $fillable = ['namesolicitante'];
 
   public function getSolicitacao($field)
   {
-    if(!is_null($field['namesolicitante']) || !is_null($field['namefinalidade'])) {
+    if(!is_null($field['namesolicitante'])) {
       $solicitacao = Solicitacao::where('namesolicitante', 'LIKE', '%'.$field['namesolicitante'].'%')
-                         ->orWhere('namefinalidade', $field["namefinalidade"])->get();
+                        ->get();
     }
     return $solicitacao;
   }

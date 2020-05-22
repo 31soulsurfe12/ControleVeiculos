@@ -73,10 +73,17 @@
               </ul>
             </li>
             <li>
-              <a href="#" class="ls-ico-panel-backup" title="Solicitacao">Autorização da Solicitação</a>
+              <a href="#" class="ls-ico-panel-backup" title="Autorizacao">Autorização da Solicitação</a>
               <ul>
                   <li><a href="/authorizacao/add">Cadastrar</a></li>
                 <li><a href="{{ route('authorizacoes') }}">Buscar</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="ls-ico-panel-backup" title="Informacao">Informações </a>
+              <ul>
+                  <li><a href="/informacao/add">Sobre</a></li>
+
               </ul>
             </li>
 

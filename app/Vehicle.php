@@ -7,21 +7,23 @@ use \App\Vehicle;
 
 
 class Vehicle extends Model
+
 {
-  protected $fillable = ['model'];
+  protected $fillable = ['situacao'];
+
 
   public function getVehicle($field)
   {
-    if(!is_null($field['model'])) {
-      $vehicle = Vehicle ::where('model', 'LIKE', '%'.$field['model'].'%')
+    if(!is_null($field['situacao'])) {
+      $vehicle = Vehicle ::where('situacao', 'LIKE', '%'.$field['situacao'].'%')
                          ->get();
     }
     return $vehicle;
 }
   public function getVehicles()
   {
-    $vehicle = Vehicle::all();
-    return $vehicle;
+    $vehicles = Vehicle::all();
+    return $vehicles;
   }
 
 	public function addVehicle($field)
@@ -34,4 +36,5 @@ class Vehicle extends Model
     $vehicle->situacao = $field['situacao'];
     $vehicle->save();
   }
+
 }

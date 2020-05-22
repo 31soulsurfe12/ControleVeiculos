@@ -2,18 +2,33 @@
 
 @section('content')
 <h1 class="ls-title-intro ls-ico-list">Listar Autorizações</h1>
+<div class="table-responsive">
 <div class="ls-box">
+
+  <div class="box-header">
+    <h5 class="ls-title">Listar Autorização</h5>
+    <form method="post" action="{{ route('authorizacao.list') }}" class="form form-inline">
+      <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+      <fieldset>
+        <label class="ls-label col-md-12">
+          <input type="text" name="placa" placeholder="Placa" >
+        </label>
+      </fieldset>
+       <button type="submit" class="btn btn-primary">Pesquisar</button>
+    </form >
+  </div>
   <table class="ls-table ls-table-striped ls-bg-header">
+
     <thead>
       <tr>
         <th>Motorista</th>
         <th>Status da Solicitação</th>
         <th >Veiculo</th>
         <th>Placa</th>
-        <th>Data</th>
-        <th>Hora</th>
-        <th>Data</th>
-        <th>Hora</th>
+        <th>Data Saida</th>
+        <th>Hora Saida</th>
+        <th>Data Retorno</th>
+        <th>Hora Retorno</th>
         <th >Quilometragem Atual</th>
         <th>Quilometragem Final</th>
         <th>Obeservação</th>
@@ -26,6 +41,7 @@
       </tr>
     </thead>
     <tbody>
+  </div>
     @foreach ($authorizacoes as $autorizacao)
       <tr>
         <td>{{ $autorizacao->namemotorista }}</td>
@@ -50,7 +66,6 @@
             <ul class="ls-dropdown-nav">
               <li><a href="{{ route('authorizacao.edit', $autorizacao->id) }}">Alterar</a></li>
               <li><a href="{{ route('authorizacao.delete', $autorizacao->id) }}">Apagar</a></li>
-              
             </ul>
           </div>
         </td>
@@ -59,4 +74,5 @@
     </tbody>
   </table>
 </div>
+
 @stop

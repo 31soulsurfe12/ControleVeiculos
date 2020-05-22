@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
+Route::get('/pdf', 'PdfController@gerarPdf');
+Route::get('/informacao/add', 'InformacaoController@get_add_informacao')->name('informacao.add'); // Rota da view
+
 
 // ROTAS PARA DESLOGAR E ENVIAR PARA VIEW DE LOGIN
 Route::get('/logout', 'Auth\LoginController@logout');
@@ -25,14 +28,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 //================================== ROTAS PARA VEÍCULO ==================================//
 // ROTAS PARA ADICIONAR VEICULO
 
-
 Route::get('/vehicle/add', 'VehicleController@get_add_vehicle')->name('vehicle.add'); // Rota da view
 Route::post('/vehicle/add', 'VehicleController@post_add_vehicle')->name('vehicle.postAdd'); // Rota do formulário
 
 // ROTAS PARA LISTAR VEICULO
 Route::get('/vehicle', function() { return redirect()->route('vehicles'); });
-Route::post('/vehicle', 'VehicleeController@post_list_vehicle')->name('vehicle.list');
+Route::post('/vehicle', 'VehicleController@post_list_vehicle')->name('vehicle.list');
 Route::get('/vehicles', 'VehicleController@list_vehicles')->name('vehicles');
+
+Route::any('/vehicle-search', 'VehicleController@searchVehicle')->name('vehicle.search');
 
 // ROTAS PARA EDITAR VEICULO
 Route::get('/vehicle/edit/{id}', 'VehicleController@get_edit_vehicle')->name('vehicle.edit');

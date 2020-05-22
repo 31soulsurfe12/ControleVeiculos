@@ -10,7 +10,7 @@ use App\Http\Requests;
 class SolicitacaoController extends Controller
 {
   private $solicitacao;
-
+  
   public function __construct(Solicitacao $solicitacao)
   {
     $this->solicitacoes = $solicitacao;
@@ -37,19 +37,19 @@ class SolicitacaoController extends Controller
 
   public function post_list_solicitacao(Request $field)
   {
-    if(is_null($field['namesolicitante']) && is_null($field['namefinalidade'])) {
+    if(is_null($field['namesolicitante'])) {
       $solicitacoes = $this->solicitacoes->getSolicitacoes();
     } else {
-      $solicitacoes = $this->solicitacao->getSolicitacao($field);
+      $solicitacoes = $this->solicitacao->getsolicitacao($field);
     }
-    return view('solicitacao/list_solicitacao', compact('solicitacoes'));
+      return view('solicitacao/list_solicitacao', compact('solicitacoes'));
   }
-  //-----------------------------------------------------------//
+
 
   //--------------------- Listar Solicitacao----------------------//
   public function list_solicitacoes()
   {
-    $solicitacoes = $this->solicitacoes->getsolicitacoes();
+    $solicitacoes = $this->solicitacoes->get();
     return view('solicitacao/list_solicitacao', compact('solicitacoes'));
   }
   //------------------------------------------------------------//

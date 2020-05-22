@@ -4,12 +4,19 @@
 <h1 class="ls-title-intro ls-ico-list">Listar Solicitações</h1>
 <div class="table-responsive">
 <div class="ls-box ">
+  <div class="box-header">
+    <h5 class="ls-title">Listar Solicitação</h5>
+    <form method="post" action="{{ route('solicitacao.list') }}" class="form form-inline">
+      <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+      <fieldset>
+        <label class="ls-label col-md-12">
+          <input type="text" name="namesolicitante" placeholder="Setor Solicitante" >
+        </label>
 
-  <form method="post" action="{{ route('solicitacao.list') }}" class="ls-form ls-form-horizontal row">
-    <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-    <fieldset>
-
-  </form>
+      </fieldset>
+       <button type="submit" class="btn btn-primary">Pesquisar</button>
+    </form >
+  </div>
 
   <table class="ls-table ls-table-striped ls-bg-header ">
     <thead>
@@ -53,6 +60,7 @@
     @endforeach
     </tbody>
   </table>
+
 </div>
 </div>
 @stop

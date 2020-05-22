@@ -9,6 +9,7 @@ use App\Http\Requests;
 class VehicleController extends Controller
 {
 	private $vehicle;
+  private $totalPage = 5;
 
 	public function __construct(Vehicle $vehicle)
   {
@@ -16,7 +17,6 @@ class VehicleController extends Controller
     $this->vehicles = $vehicle;
     $this->middleware('auth');
   }
-
 
 
 //-------------------- Adicionar veiculos --------------------//
@@ -32,23 +32,32 @@ class VehicleController extends Controller
   }
 	//---------------- Listar veiculo Específico -----------------//
 
-    public function get_list_vehicle()
+
+	 public function get_list_vehicle()
   {
     return list_vehicles();
   }
-	public function post_list_vehicle()
-	{
 
-	}
+  public function post_list_vehicle(Request $field)
+  {
+    if(is_null($field['situacao'])) {
+      $vehicles = $this->vehicles->getVehicles();
+    } else {
+      $vehicles = $this->vehicle->getVehicle($field);
+    }
+    return view('vehicle/list_vehicle', compact('vehicles'));
+  }
+
 	//--------------------- Listar clientes ----------------------//
    public function list_vehicles()
   {
-    $vehicles = $this->vehicles->getVehicles();
-
+  //  $vehicles = $this->vehicles->getVehicles();
+    $vehicles = $this->vehicles->paginate($this->totalPage);
     return view('vehicle/list_vehicle', compact('vehicles'));
-
-		//-------------------- Editar Veiculos --------------------//
   }
+
+
+	//-------------------- Editar Veiculos --------------------//
 	public function get_edit_vehicle($id)
 {
 	$vehicle = $this->vehicle->find($id);

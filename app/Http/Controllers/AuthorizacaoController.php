@@ -35,16 +35,21 @@ class AuthorizacaoController extends Controller
     return list_authorizacoes();
   }
 
-  public function post_list_authorizacao()
+  public function post_list_authorizacao(Request $field)
   {
-
+    if(is_null($field['placa'])) {
+      $authorizacoes = $this->authorizacoes->getAuthorizacoes();
+    } else {
+      $authorizacoes = $this->authorizacao->getauthorizacao($field);
+    }
+      return view('authorizacao/list_authorizacao', compact('authorizacoes'));
   }
   //------------------------------------------------------------//
 
   //--------------------- Listar Autorização----------------------//
   public function list_authorizacoes()
   {
-    $authorizacoes = $this->authorizacoes->getauthorizacoes();
+    $authorizacoes = $this->authorizacoes->get();
     return view('authorizacao/list_authorizacao', compact('authorizacoes'));
   }
   //------------------------------------------------------------//
