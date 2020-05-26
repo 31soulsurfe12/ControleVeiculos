@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::get('/pdf', 'PdfController@gerarPdf');
 Route::get('/informacao/add', 'InformacaoController@get_add_informacao')->name('informacao.add'); // Rota da view
-
+Route::resource('chart','ChartController');
 
 // ROTAS PARA DESLOGAR E ENVIAR PARA VIEW DE LOGIN
 Route::get('/logout', 'Auth\LoginController@logout');

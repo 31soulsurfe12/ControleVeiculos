@@ -15,6 +15,8 @@ class CreateAuthorizacaosTable extends Migration
     {
         Schema::create('authorizacaos', function (Blueprint $table) {
           $table->increments('id')->nullable(false);
+          //$table->integer('user_id')->unsigned();
+          //$table->foreign('user_id')->references('id')->onDelete('cascade');
           $table->string('namemotorista', 150)->nullable(false);
           $table->string('model', 50)->nullable(false);
           $table->string('placa', 20)->nullable(false);

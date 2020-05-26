@@ -15,6 +15,8 @@ class CreateSolicitacoesTable extends Migration
     {
         Schema::create('solicitacoes', function (Blueprint $table) {
           $table->increments('id')->nullable(false);
+          //$table->integer('user_id')->unsigned();
+          //$table->foreign('user_id')->references('id')->onDelete('cascade');
           $table->string('namesolicitante', 50)->nullable(false);
           $table->string('nameramal', 50)->nullable(false);
           $table->string('nameroteiro', 100)->nullable(false);

@@ -82,6 +82,7 @@
             <li>
               <a href="#" class="ls-ico-panel-backup" title="Informacao">Informações </a>
               <ul>
+                  <li><a href="/chart">Gráfico da Situação dos Veiculos</a></li>
                   <li><a href="/informacao/add">Sobre</a></li>
 
               </ul>
