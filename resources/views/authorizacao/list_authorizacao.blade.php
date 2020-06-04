@@ -42,30 +42,32 @@
     </thead>
     <tbody>
   </div>
-    @foreach ($authorizacoes as $autorizacao)
+    @foreach ($authorizacoes as $authorizacao)
       <tr>
-        <td>{{ $autorizacao->namemotorista }}</td>
-        <td >{{ $autorizacao->aprovacao }}</td>
-        <td>{{ $autorizacao->model }}</td>
-        <td>{{ $autorizacao->placa}}</td>
-        <td>{{ $autorizacao->datasaida }}</td>
-        <td>{{ $autorizacao->horasaida }}</td>
-        <td >{{ $autorizacao->dataretorno }}</td>
-        <td>{{ $autorizacao->horaretorno }}</td>
-        <td>{{ $autorizacao->kminicial}}</td>
-        <td>{{ $autorizacao->kmfinal }}</td>
-        <td>{{ $autorizacao->observ }}</td>
-        <td >{{ $autorizacao->statusveiculo }}</td>
-        <td>{{ $autorizacao->cientemot }}</td>
-        <td>{{ $autorizacao->datacient}}</td>
-        <td>{{ $autorizacao->autorizacao }}</td>
-        <td>{{ $autorizacao->data }}</td>
+        <td>{{ $authorizacao->namemotorista }}</td>
+        <td >{{ $authorizacao->aprovacao }}</td>
+        <td>{{ $authorizacao->model }}</td>
+        <td>{{ $authorizacao->placa}}</td>
+        <td>{{ $authorizacao->datasaida }}</td>
+        <td>{{ $authorizacao->horasaida }}</td>
+        <td >{{ $authorizacao->dataretorno }}</td>
+        <td>{{ $authorizacao->horaretorno }}</td>
+        <td>{{ $authorizacao->kminicial}}</td>
+        <td>{{ $authorizacao->kmfinal }}</td>
+        <td>{{ $authorizacao->observ }}</td>
+        <td >{{ $authorizacao->statusveiculo }}</td>
+        <td>{{ $authorizacao->cientemot }}</td>
+        <td>{{ $authorizacao->datacient}}</td>
+        <td>{{ $authorizacao->autorizacao }}</td>
+        <td>{{ $authorizacao->data }}</td>
         <td class="ls-regroup ">
           <div data-ls-module="dropdown" class="ls-dropdown ">
             <a href="#" class="ls-btn ls-ico-edit-admin"></a>
             <ul class="ls-dropdown-nav">
-              <li><a href="{{ route('authorizacao.edit', $autorizacao->id) }}">Alterar</a></li>
-              <li><a href="{{ route('authorizacao.delete', $autorizacao->id) }}">Apagar</a></li>
+              <li><a href="{{ route('authorizacao.edit', $authorizacao->id) }}">Alterar</a></li>
+              <li><a href="{{ route('authorizacao.delete', $authorizacao->id) }}">Apagar</a></li>
+              <li><a href="{{ route('updf', $authorizacao->id) }}">Imprimir</a></li>
+
             </ul>
           </div>
         </td>

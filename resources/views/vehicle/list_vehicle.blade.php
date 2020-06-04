@@ -40,6 +40,7 @@
             <ul class="ls-dropdown-nav">
               <li><a href="{{ route('vehicle.edit', $vehicle->id) }}">Alterar</a></li>
               <li><a href="{{ route('vehicle.delete', $vehicle->id) }}">Apagar</a></li>
+              
             </ul>
           </div>
         </td>

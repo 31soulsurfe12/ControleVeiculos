@@ -4,20 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Solicitacao;
-use \App\Vehicle;
 use \App\Authorizacao;
 use PDF;
 
 class PdfController extends Controller
 {
-    public function gerarPdf(){
-      //$authorizacao = Authorizacao::all();
-      $solicitacao = Solicitacao::all();
+    public function gerarPdf( $id){
 
-      //$pdf = PDF::loadView('pdf', compact('authorizacao'));
-      //return $pdf->setPaper('a4')->stream('Autorização.pdf');
+      $solicitacao = Solicitacao::where('id', '>', 0)->where('id', 'like', $id)->get();
 
-      $pdf = PDF::loadView('pdf', compact('solicitacao'));
+      $pdf = PDF::loadView('pdf', compact('solicitacao',  $solicitacao));
       return $pdf->setPaper('a4')->stream('Solicitação.pdf');
     }
+
+       public function gerarPdf1( $id)
+    {
+       $authorizacao = Authorizacao::where('id', '>', 0)->where('id', 'like', $id)->get();
+
+      $updf = PDF::loadView('updf', compact('authorizacao'));
+      return $updf->setPaper('a4')->stream('Autorização.pdf');
+
+    }
+
 }

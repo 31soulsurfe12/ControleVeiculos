@@ -53,6 +53,7 @@
             <ul class="ls-dropdown-nav">
               <li><a href="{{ route('solicitacao.edit', $solicitacao->id) }}">Alterar</a></li>
               <li><a href="{{ route('solicitacao.delete', $solicitacao->id) }}">Apagar</a></li>
+              <li><a href="{{ route('pdf', $solicitacao->id) }}">Imprimir</a></li>
             </ul>
           </div>
         </td>

@@ -10,7 +10,7 @@ use App\Http\Requests;
 class SolicitacaoController extends Controller
 {
   private $solicitacao;
-  
+
   public function __construct(Solicitacao $solicitacao)
   {
     $this->solicitacoes = $solicitacao;
@@ -60,8 +60,6 @@ class SolicitacaoController extends Controller
     public function get_edit_solicitacao($id)
   {
     $solicitacao = $this->solicitacao->find($id);
-
-
 
     return view('solicitacao/edit_solicitacao', compact('solicitacao'));
   }

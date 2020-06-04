@@ -37,6 +37,19 @@
   --font-family-sans-serif: "Nunito", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+#head{
+    background-image: url("fad.jpg");
+
+    font-size: 30px;
+    text-align: center;
+    height: 100px;
+    width: 110%;
+    position: fixed;
+    left: 400px;
+    right: 0;
+    margin: auto;
+}
+
 
 *,
 *::before,
@@ -44,12 +57,13 @@
   box-sizing: border-box;
 }
 
+
 .logo {
   width: 160px;
 }
 .hospital{
   text-align: center;
-  font-size: 12pt;
+  font-size: 11pt;
 }
 .margen {
 text-align: center;
@@ -63,9 +77,12 @@ margin-top: 10px;
   text-align: center;
   font-size: 15pt;
 }
-.margen1 {
+#margen1 {
 text-align:center;
-margin-top: 15px;
+margin-top: 0px;
+height: 150px;
+width: 300px;
+
 }
 
 

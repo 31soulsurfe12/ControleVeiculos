@@ -34,11 +34,14 @@
 
   <!-- Nome do produto/marca com sidebar -->
 
+
   <h1 class="ls-brand-name">
-      <div class="container-fluid">
-       <div class="form-group col-md-6">
+      <div class="container-fluid" >
+       <div class="form-group col-md-6" >
           <img src="{{URL::asset('images/logo.png')}}" alt="profile Pic"  width="175"  class="logo">
+          
        </div>
+
         <div class="form-group col-md-6 ">
           <a >
            <small class="margen" >CONTROLE DE VEICULOS</small>

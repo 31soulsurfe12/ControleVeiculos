@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
-Route::get('/pdf', 'PdfController@gerarPdf');
+Route::get('/pdf/{id}', 'PdfController@gerarPdf')->name('pdf');
+Route::get('/updf/{id}', 'PdfController@gerarPdf1')->name('updf');
 Route::get('/informacao/add', 'InformacaoController@get_add_informacao')->name('informacao.add'); // Rota da view
 Route::resource('chart','ChartController');
 
