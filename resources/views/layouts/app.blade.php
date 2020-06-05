@@ -25,21 +25,18 @@
     <div class="container">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <h1 class="ls-brand-name">
-          <div class="container-fluid">
-            <div id="head">
-             <div class="form-group col-md-4">
-              <img src="{{asset('images/logo.png')}}" class="logo1"/>
-              <img src="{{ asset ('images/logo3.png')}}"  height="100px"/>
-              <p  >CONTROLE DE VEICULOS</p>
-             </div>
-             </div>
-             <div id="margen1">
-             <div class="form-group col-md-8 ">
-             </div>
-             </div>
-            </div>
-          </div>
-        </h1>
+                    <div class="container-fluid">
+                      <div class="form-group col-md-4">
+                       <img src="{{asset('images/logo.png')}}" class="logo1"/>
+                      </div>
+                      <div class="form-group col-md-8 ">
+                         <p class="margen1">HOSPITAL SÃO JOSÉ</p>
+                          <p class="hospital1">CONTROLE DE VEICULOS</p>
+                     </div>
+
+                      </div>
+                   </div>
+                  </h1>
                     <!-- Left Side Of Navbar -->
           <ul class="navbar-nav mr-auto">
 

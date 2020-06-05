@@ -43,11 +43,12 @@
     font-size: 30px;
     text-align: center;
     height: 100px;
-    width: 110%;
-    position: fixed;
-    left: 400px;
+    width: 310%;
+    position:fixed-top;
+
+    left:900px;
     right: 0;
-    margin: auto;
+    margin: mx-auto;
 }
 
 
@@ -77,12 +78,9 @@ margin-top: 10px;
   text-align: center;
   font-size: 15pt;
 }
-#margen1 {
+.margen1 {
 text-align:center;
-margin-top: 0px;
-height: 150px;
-width: 300px;
-
+margin-top: 15px;
 }
 
 
